@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <style media="screen">
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      .global-box {
-height: 100px;
-width: 150px;
-position: absolute;
-bottom: 40px;
-left: 10px;
-background-color: rgba(255, 255, 255, 0.9);
-padding: 15px;
-text-align: center;
-}
+<html lang="en">
 
-.country-box {
-height: 100px;
-width: 150px;
-position: absolute;
-top: 40px;
-right: 10px;
-background-color: rgba(255, 255, 255, 0.9);
-padding: 15px;
-text-align: center;
-}
-      #map{
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
-    <title>Worldwide Covid-19</title>
-    <link rel="stylesheet" href="virus icon/virus icon">
-    <link rel="icon" href="virus icon/external-virus-virus-transmission-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1.png">
-  </head>
-  <body>
-    <div id='map'></div>
-    <div id='global-box' class="global-box">
-    </div>
-    <div id='country-box' class="country-box">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Worldwide Covid-19</title>
+  <link rel="icon"
+    href="virus icon/external-virus-virus-transmission-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1.png">
+</head>
 
-    </div>
-  </body>
+<body>
+  <div id='map'></div>
+
+  <div id='global-box' class="box global-box"></div>
+
+  <div id='country-box' class="box country-box"></div>
+
+  <div id='selector-box' class="box selector-box">
+    <label for="start-date">Start Date</label>
+    <input type="date" id="start" name="start-date" min="2020-03-01" value="2020-03-01">
+    <br>
+    <label for="end-date">End Date</label>
+    <input type="date" id="end" name="end-date" min="2020-03-01">
+  </div>
+
+  <div id='temp-box' class="box temp-box"></div>
+</body>
 
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
@@ -60,5 +43,7 @@ text-align: center;
   });
 </script>
 
-  <script src="index.js"></script>
+<script src="js/default.js"></script>
+<script src="js/index.js"></script>
+
 </html>
