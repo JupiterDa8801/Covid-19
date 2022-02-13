@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  height: 100px;
+  width: 150px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  text-align: center;
+}
+
+.global-box {
+  bottom: 40px;
+  left: 10px;
+}
+
+.country-box {
+  top: 40px;
+  right: 10px;
+}
+
+.selector-box {
+  bottom: 40px;
+  right: 10px;
+}
+
+.temp-box {
+  top: 40px;
+  left: 10px;
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+}
